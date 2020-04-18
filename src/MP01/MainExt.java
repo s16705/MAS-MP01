@@ -10,6 +10,7 @@ import java.util.List;
 
 public class MainExt implements Serializable {
 
+    //Atrybut klasowy i powtarzalny
     private static List<MainExt> allExtents = new ArrayList<>();
 
     public MainExt(){
@@ -26,8 +27,9 @@ public class MainExt implements Serializable {
     }
 
     public static void getExt(){
+        //MainExt list = allExtents.stream().findFirst().get();
         for (MainExt e : allExtents)
-            System.out.println(e.getClass());
+            System.out.println(e);
     }
 
 }
