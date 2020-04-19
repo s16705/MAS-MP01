@@ -87,6 +87,7 @@
       <workItem from="1586892586325" duration="3452000" />
       <workItem from="1586972970638" duration="4308000" />
       <workItem from="1587225008176" duration="5760000" />
+      <workItem from="1587312107255" duration="2145000" />
     </task>
     <servers />
   </component>
@@ -102,22 +103,22 @@
       <screen x="-320" y="-1440" width="2560" height="1400" />
     </state>
     <state x="782" y="-824" key="Github.CreateGistDialog/0.0.1920.1040/-320.-1440.2560.1400@-320.-1440.2560.1400" timestamp="1586895861978" />
-    <state width="2517" height="453" key="GridCell.Tab.0.bottom" timestamp="1587231705098">
+    <state width="2517" height="381" key="GridCell.Tab.0.bottom" timestamp="1587316303121">
       <screen x="-320" y="-1440" width="2560" height="1400" />
     </state>
-    <state width="2517" height="453" key="GridCell.Tab.0.bottom/0.0.1920.1040/-320.-1440.2560.1400@-320.-1440.2560.1400" timestamp="1587231705098" />
-    <state width="2517" height="453" key="GridCell.Tab.0.center" timestamp="1587231705098">
+    <state width="2517" height="381" key="GridCell.Tab.0.bottom/0.0.1920.1040/-320.-1440.2560.1400@-320.-1440.2560.1400" timestamp="1587316303121" />
+    <state width="2517" height="381" key="GridCell.Tab.0.center" timestamp="1587316303120">
       <screen x="-320" y="-1440" width="2560" height="1400" />
     </state>
-    <state width="2517" height="453" key="GridCell.Tab.0.center/0.0.1920.1040/-320.-1440.2560.1400@-320.-1440.2560.1400" timestamp="1587231705098" />
-    <state width="2517" height="453" key="GridCell.Tab.0.left" timestamp="1587231705098">
+    <state width="2517" height="381" key="GridCell.Tab.0.center/0.0.1920.1040/-320.-1440.2560.1400@-320.-1440.2560.1400" timestamp="1587316303120" />
+    <state width="2517" height="381" key="GridCell.Tab.0.left" timestamp="1587316303120">
       <screen x="-320" y="-1440" width="2560" height="1400" />
     </state>
-    <state width="2517" height="453" key="GridCell.Tab.0.left/0.0.1920.1040/-320.-1440.2560.1400@-320.-1440.2560.1400" timestamp="1587231705098" />
-    <state width="2517" height="453" key="GridCell.Tab.0.right" timestamp="1587231705098">
+    <state width="2517" height="381" key="GridCell.Tab.0.left/0.0.1920.1040/-320.-1440.2560.1400@-320.-1440.2560.1400" timestamp="1587316303120" />
+    <state width="2517" height="381" key="GridCell.Tab.0.right" timestamp="1587316303121">
       <screen x="-320" y="-1440" width="2560" height="1400" />
     </state>
-    <state width="2517" height="453" key="GridCell.Tab.0.right/0.0.1920.1040/-320.-1440.2560.1400@-320.-1440.2560.1400" timestamp="1587231705098" />
+    <state width="2517" height="381" key="GridCell.Tab.0.right/0.0.1920.1040/-320.-1440.2560.1400@-320.-1440.2560.1400" timestamp="1587316303121" />
     <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1586889721660">
       <screen x="-320" y="-1440" width="2560" height="1400" />
     </state>
@@ -134,10 +135,10 @@
       <screen x="-320" y="-1440" width="2560" height="1400" />
     </state>
     <state width="2517" height="492" key="GridCell.Tab.1.right/0.0.1920.1040/-320.-1440.2560.1400@-320.-1440.2560.1400" timestamp="1586889721660" />
-    <state x="656" y="-916" key="com.intellij.ide.util.TipDialog" timestamp="1587225384504">
+    <state x="656" y="-916" key="com.intellij.ide.util.TipDialog" timestamp="1587312113922">
       <screen x="-320" y="-1440" width="2560" height="1400" />
     </state>
-    <state x="656" y="-916" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-320.-1440.2560.1400@-320.-1440.2560.1400" timestamp="1587225384504" />
+    <state x="656" y="-916" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-320.-1440.2560.1400@-320.-1440.2560.1400" timestamp="1587312113922" />
     <state x="664" y="-847" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1586882214036">
       <screen x="-320" y="-1440" width="2560" height="1400" />
     </state>

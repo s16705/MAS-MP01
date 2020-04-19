@@ -16,8 +16,8 @@ public class Osoba extends MainExt {
     }
 
     //Metoda klasowa
-    public static String policzWiek(){
-        return "Wiek wynosi (w latach): "+LocalDate.now().compareTo(data_urodzenia_static);
+    public static void policzWiek(){
+        System.out.println("Wiek wynosi (w latach): "+LocalDate.now().compareTo(data_urodzenia_static));
     }
 
     public String toString(){

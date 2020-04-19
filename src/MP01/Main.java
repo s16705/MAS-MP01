@@ -31,9 +31,8 @@ public class Main {
 
             ObjectOutputStream out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(file)));
             Osoba.writeExtent(out);
-            MainExt.getExt();
+            //MainExt.getExt();
             out.close();
-            //Osoba.getExt();
         }
 
     }
