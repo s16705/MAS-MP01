@@ -21,6 +21,6 @@ public class Osoba extends MainExt {
     }
 
     public String toString(){
-        return "Dane Osoby. Imie: "+imie+"\nNazwisko: "+nazwisko+"\nData urodzenia: "+data_urodzenia;
+        return "Dane Osoby. Imie: "+imie+"\nNazwisko: "+nazwisko+"\nData urodzenia: "+data_urodzenia+"\n";
     }
 }

@@ -15,7 +15,7 @@ public class Faktura extends MainExt {
 
     public String toString(){
 
-        return "Dane faktury. Nazwa firmy: "+nazwa+"\nNIP: "+NIP+"\nMiasto: "+miasto+"\nUlica: "+ulica+"\nKod Pocztowy: "+kodPocztowy;
+        return "Dane faktury. Nazwa firmy: "+nazwa+"\nNIP: "+NIP+"\nMiasto: "+miasto+"\nUlica: "+ulica+"\nKod Pocztowy: "+kodPocztowy+"\n";
     }
 
 

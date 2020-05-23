@@ -6,9 +6,9 @@ public class Klient extends Osoba {
 
     //Atrybut klasowy
     static int pktNaKarcie = 0;
-
     //Atrybut złożony i opcjonalny
     Faktura daneDoFaktury;
+    KlientStacja ks = new KlientStacja(0,"",false);
 
     //Przeciążenie metod
     public Klient(String imie, String nazwisko, LocalDate data_urodzenia) {
@@ -39,9 +39,16 @@ public class Klient extends Osoba {
     //Przesłonięcie metody
     public String toString() {
         if (daneDoFaktury == null){
-            return "Dane Klienta. Imie: "+imie+"\nNazwisko: "+nazwisko+"\nData urodzenia: "+data_urodzenia;
+            return "Dane Klienta. Imie: "+imie+"\nNazwisko: "+nazwisko+"\nData urodzenia: "+data_urodzenia+"\n";
         }else{
-            return "Dane Klienta. Imie: "+imie+"\nNazwisko: "+nazwisko+"\nData urodzenia: "+data_urodzenia;
+            return "Dane Klienta. Imie: "+imie+"\nNazwisko: "+nazwisko+"\nData urodzenia: "+data_urodzenia+"\n";
+        }
+    }
+
+    public void addTankowanieK(int iloscPaliwa, String paliwo, boolean czyFaktura, Stacja stacja) {
+        if(!ks.stacjaSet.contains(stacja)){
+            ks.stacjaSet.add(stacja);
+            stacja.addTankowanieS(iloscPaliwa,paliwo,czyFaktura,this);
         }
     }
 }
