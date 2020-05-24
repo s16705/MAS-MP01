@@ -4,6 +4,8 @@ public class Faktura extends MainExt {
 
     String nazwa, miasto, ulica, kodPocztowy;
     int NIP;
+    //Asocjacja kwalifikowana
+    private Klient klient;
 
     public Faktura(String nazwa, int NIP, String miasto, String ulica, String kodPocztowy){
         this.nazwa = nazwa;
@@ -11,6 +13,14 @@ public class Faktura extends MainExt {
         this.miasto = miasto;
         this.ulica = ulica;
         this.kodPocztowy = kodPocztowy;
+    }
+
+    public void addKlientQualif(Klient klient) {
+        if(this.klient != klient){
+            this.klient = klient;
+            // reverse
+            klient.addFakturaQualif(this);
+        }
     }
 
     public String toString(){

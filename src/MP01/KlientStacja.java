@@ -1,29 +1,59 @@
 package MP01;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.time.LocalDate;
+import java.util.*;
 
 public class KlientStacja extends MainExt {
+
 
     int iloscPaliwa;
     String paliwo;
     boolean czyFaktura;
-    Set<Klient> klientSet = new HashSet<>();
-    Set<Stacja> stacjaSet = new HashSet<>();
+
+    Klient klient;
+    Stacja stacja;
+    private LocalDate dataTankowania;
+
+    public KlientStacja(){
+        this.dataTankowania = LocalDate.now();
+    }
+
+    public KlientStacja(Klient klient, Stacja stacja, int iloscPaliwa, String paliwo){
+        this.klient = klient;
+        this.stacja = stacja;
+        this.dataTankowania = LocalDate.now();
+        this.iloscPaliwa = iloscPaliwa;
+        this.paliwo = paliwo;
+
+    }
 
     //Asocjacja z atrybutem
+    /*
     public KlientStacja(int iloscPaliwa, String paliwo, boolean czyFaktura){
         this.iloscPaliwa = iloscPaliwa;
         this.paliwo = paliwo;
         this.czyFaktura = czyFaktura;
     }
-
-    public String toString(){
-        if(czyFaktura){
-            return "Klient "+klientSet+" zatankował "+iloscPaliwa+" litrów "+paliwo+" na stacji"+stacjaSet+" i brał fakturę\n";
-        }else{
-            return "Klient "+klientSet+" zatankował "+iloscPaliwa+" litrów "+paliwo+" na stacji"+stacjaSet+" i nie brał faktury\n";
+     */
+    public void addTankowanieS(Klient klient) {
+        if(this.klient != klient){
+            this.klient = klient;
+            klient.addTankowanieK(this);
         }
     }
+
+    public void addTankowanieK(Stacja stacja) {
+        if(this.stacja != stacja){
+            this.stacja = stacja;
+            stacja.addTankowanieS(this);
+        }
+    }
+
+
+    public String toString(){
+        return "Klient "+klient+" zatankował dnia "+dataTankowania+" na stacji "+stacja+"\n"+iloscPaliwa+" litrów paliwa "+paliwo+"\n";
+    }
+
+
 }
 
