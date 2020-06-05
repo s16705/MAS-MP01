@@ -45,7 +45,7 @@ public class Main {
 
             //Tankowanie - asocjacja z atrybutem
             //orlen.addTankowanieS(35,"LPG",false,seba);
-            KlientStacja ks = new KlientStacja(seba,orlen,40,"diesel");
+            Zakupy ks = new Zakupy(seba,orlen,40,"diesel");
             seba.addTankowanieK(ks);
 
 

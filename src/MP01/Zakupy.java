@@ -3,7 +3,7 @@ package MP01;
 import java.time.LocalDate;
 import java.util.*;
 
-public class KlientStacja extends MainExt {
+public class Zakupy extends MainExt {
 
 
     int iloscPaliwa;
@@ -14,11 +14,11 @@ public class KlientStacja extends MainExt {
     Stacja stacja;
     private LocalDate dataTankowania;
 
-    public KlientStacja(){
+    public Zakupy(){
         this.dataTankowania = LocalDate.now();
     }
 
-    public KlientStacja(Klient klient, Stacja stacja, int iloscPaliwa, String paliwo){
+    public Zakupy(Klient klient, Stacja stacja, int iloscPaliwa, String paliwo){
         this.klient = klient;
         this.stacja = stacja;
         this.dataTankowania = LocalDate.now();

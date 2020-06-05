@@ -8,12 +8,12 @@ public class Stacja extends MainExt {
     List<Pracownik> pracownikList = new ArrayList<>(); // *
     //Asocjacja z atrybutem
     //KlientStacja ks;
-    List<KlientStacja> klientList;
+    List<Zakupy> klientList;
 
     public Stacja(String nazwa, String adres){
         this.nazwa = nazwa;
         this.adres = adres;
-        this.klientList = new ArrayList<KlientStacja>();
+        this.klientList = new ArrayList<Zakupy>();
 
     }
 
@@ -27,7 +27,7 @@ public class Stacja extends MainExt {
     }
 
     //Asocjacja z atrybutem
-    public void addTankowanieS(KlientStacja ks){
+    public void addTankowanieS(Zakupy ks){
         if(!klientList.contains(ks)){
             klientList.add(ks);
             ks.addTankowanieK(this);
@@ -53,7 +53,7 @@ public class Stacja extends MainExt {
         for(Pracownik p : pracownikList) {
             info += "Pracownicy stacji: " + p.imie +" "+p.nazwisko + "\n";
         }
-        for(KlientStacja k : klientList){
+        for(Zakupy k : klientList){
             info += "KlientStacja: "+k.klient+k.stacja+k.iloscPaliwa;
         }
         return info;

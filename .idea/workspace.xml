@@ -93,6 +93,9 @@
       <workItem from="1590247663448" duration="2554000" />
       <workItem from="1590272129437" duration="3924000" />
       <workItem from="1590311316454" duration="19031000" />
+      <workItem from="1590928869809" duration="600000" />
+      <workItem from="1591218157857" duration="2180000" />
+      <workItem from="1591293552387" duration="1070000" />
     </task>
     <servers />
   </component>
@@ -152,12 +155,13 @@
       <screen x="-320" y="-1440" width="2560" height="1400" />
     </state>
     <state width="2517" height="492" key="GridCell.Tab.1.right/0.0.1920.1040/-320.-1440.2560.1400@-320.-1440.2560.1400" timestamp="1586889721660" />
-    <state x="732" y="389" key="com.intellij.ide.util.TipDialog" timestamp="1590311317612">
+    <state x="732" y="389" key="com.intellij.ide.util.TipDialog" timestamp="1591385205144">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="715" y="-916" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-261.-1440.2560.1400@-261.-1440.2560.1400" timestamp="1590247682695" />
+    <state x="715" y="-916" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-261.-1440.2560.1400@-261.-1440.2560.1400" timestamp="1590928869783" />
+    <state x="732" y="389" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-261.-1440.2560.1400@0.0.1920.1040" timestamp="1591385205144" />
     <state x="656" y="-916" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-320.-1440.2560.1400@-320.-1440.2560.1400" timestamp="1587312113922" />
-    <state x="732" y="389" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590311317612" />
+    <state x="732" y="389" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591293573444" />
     <state x="664" y="-847" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1586882214036">
       <screen x="-320" y="-1440" width="2560" height="1400" />
     </state>

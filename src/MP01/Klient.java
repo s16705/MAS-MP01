@@ -10,7 +10,7 @@ public class Klient extends Osoba {
     //Atrybut złożony i opcjonalny
     Faktura daneDoFaktury;
     //Asocjacja z atrybutem
-    List<KlientStacja> stacjaList;
+    List<Zakupy> stacjaList;
     //Asocjacja kwalifikowana
     private Map<Integer, Faktura> fakturaQualif = new TreeMap<>();
     //Kompozycja
@@ -19,7 +19,7 @@ public class Klient extends Osoba {
     //Przeciążenie metod
     public Klient(String imie, String nazwisko, LocalDate data_urodzenia) {
         super(imie, nazwisko, data_urodzenia);
-        this.stacjaList = new ArrayList<KlientStacja>();
+        this.stacjaList = new ArrayList<Zakupy>();
     }
 
     /*
@@ -48,7 +48,7 @@ public class Klient extends Osoba {
     }
 
     //Asocjacja z atrybutem
-    public void addTankowanieK(KlientStacja ks) {
+    public void addTankowanieK(Zakupy ks) {
 
         if(!stacjaList.contains(ks)){
             stacjaList.add(ks);
