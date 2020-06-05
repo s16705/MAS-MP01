@@ -1,5 +1,9 @@
 package MP01;
 
+import GUI.KlientGUI;
+import GUI.ZakupyGUI;
+
+import javax.swing.*;
 import java.io.*;
 import java.time.LocalDate;
 import java.time.Month;
@@ -15,7 +19,20 @@ public class Main {
             ObjectInputStream in = new ObjectInputStream(new BufferedInputStream(new FileInputStream(file)));
             MainExt.readExtent(in);
             MainExt.getExt();
-            //Osoba.policzWiek();
+
+            JFrame jZakupy = new JFrame("Zakupy");
+            jZakupy.setContentPane(new ZakupyGUI().panel1);
+            jZakupy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            jZakupy.pack();
+            jZakupy.setVisible(true);
+
+            JFrame jKlient = new JFrame("Kleint");
+            jKlient.setContentPane(new KlientGUI().panel1);
+            jKlient.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            jKlient.pack();
+            jKlient.setVisible(true);
+
+
             in.close();
         }else{
             //Wpisujemy dane do pliku
