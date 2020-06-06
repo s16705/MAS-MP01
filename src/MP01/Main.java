@@ -1,7 +1,6 @@
 package MP01;
 
-import GUI.KlientGUI;
-import GUI.ZakupyGUI;
+import GUI.*;
 
 import javax.swing.*;
 import java.io.*;
@@ -20,17 +19,37 @@ public class Main {
             MainExt.readExtent(in);
             MainExt.getExt();
 
+
+            //Implementacja GUI
             JFrame jZakupy = new JFrame("Zakupy");
             jZakupy.setContentPane(new ZakupyGUI().panel1);
             jZakupy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             jZakupy.pack();
             jZakupy.setVisible(true);
 
-            JFrame jKlient = new JFrame("Kleint");
+            JFrame jKlient = new JFrame("Klient");
             jKlient.setContentPane(new KlientGUI().panel1);
             jKlient.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             jKlient.pack();
             jKlient.setVisible(true);
+
+            JFrame jStacja = new JFrame("Stacja");
+            jStacja.setContentPane(new StacjaGUI().panel1);
+            jStacja.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            jStacja.pack();
+            jStacja.setVisible(true);
+
+            JFrame jFaktura = new JFrame("Faktura");
+            jFaktura.setContentPane(new FakturaGUI().panel1);
+            jFaktura.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            jFaktura.pack();
+            jFaktura.setVisible(true);
+
+            JFrame jPracownik = new JFrame("Pracownik");
+            jPracownik.setContentPane(new PracownikGUI().panel1);
+            jPracownik.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            jPracownik.pack();
+            jPracownik.setVisible(true);
 
 
             in.close();
