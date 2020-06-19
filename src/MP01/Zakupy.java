@@ -1,29 +1,20 @@
 package MP01;
 
 import java.time.LocalDate;
-import java.util.*;
+import java.util.List;
 
 public class Zakupy extends MainExt {
 
-
-    int iloscPaliwa;
-    String paliwo;
-    boolean czyFaktura;
-
     Klient klient;
     Stacja stacja;
-    private LocalDate dataTankowania;
+    private LocalDate dataZakupow;
+    List<Object> kupioneProdukty;
 
-    public Zakupy(){
-        this.dataTankowania = LocalDate.now();
-    }
-
-    public Zakupy(Klient klient, Stacja stacja, int iloscPaliwa, String paliwo){
+    public Zakupy(Klient klient, Stacja stacja, List<Object> kupioneProdukty){
         this.klient = klient;
         this.stacja = stacja;
-        this.dataTankowania = LocalDate.now();
-        this.iloscPaliwa = iloscPaliwa;
-        this.paliwo = paliwo;
+        this.dataZakupow = LocalDate.now();
+        this.kupioneProdukty = kupioneProdukty;
 
     }
 
@@ -35,25 +26,24 @@ public class Zakupy extends MainExt {
         this.czyFaktura = czyFaktura;
     }
      */
-    public void addTankowanieS(Klient klient) {
-        if(this.klient != klient){
-            this.klient = klient;
-            klient.addTankowanieK(this);
-        }
-    }
 
-    public void addTankowanieK(Stacja stacja) {
-        if(this.stacja != stacja){
-            this.stacja = stacja;
-            stacja.addTankowanieS(this);
-        }
-    }
+    //Potrzeba zmienic na zakupy zamiast tankowania
 
+//    public void addTankowanieS(Klient klient) {
+//        if(this.klient != klient){
+//            this.klient = klient;
+//            klient.addTankowanieK(this);
+//        }
+//    }
+//
+//    public void addTankowanieK(Stacja stacja) {
+//        if(this.stacja != stacja){
+//            this.stacja = stacja;
+//            stacja.addTankowanieS(this);
+//        }
+//    }
 
     public String toString(){
-        return "Klient "+klient+" zatankował dnia "+dataTankowania+" na stacji "+stacja+"\n"+iloscPaliwa+" litrów paliwa "+paliwo+"\n";
+        return "Klient "+klient+" zatankował dnia "+ dataZakupow +" na stacji "+stacja+"\nLista produktow: "+ kupioneProdukty.toArray()+"\n";
     }
-
-
 }
-

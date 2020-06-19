@@ -9,12 +9,15 @@ public class Stacja extends MainExt {
     //Asocjacja z atrybutem
     //KlientStacja ks;
     List<Zakupy> klientList;
+    List<String> sprzedawanePaliwo = new ArrayList<>();
 
     public Stacja(String nazwa, String adres){
         this.nazwa = nazwa;
         this.adres = adres;
         this.klientList = new ArrayList<Zakupy>();
-
+        sprzedawanePaliwo.add("Benzyna");
+        sprzedawanePaliwo.add("Diesel");
+        sprzedawanePaliwo.add("LPG");
     }
 
     //Zwykla asocjacja
@@ -26,35 +29,13 @@ public class Stacja extends MainExt {
         }
     }
 
-    //Asocjacja z atrybutem
-    public void addTankowanieS(Zakupy ks){
-        if(!klientList.contains(ks)){
-            klientList.add(ks);
-            ks.addTankowanieK(this);
-        }
-    }
-
-
-
-    /*
-    public Stacja findStacja(int id) throws Exception {
-        for(Stacja s : ){
-            if(p.id == id){
-                return p;
-            }
-        }
-        throw new Exception("Nie udało się znaleźć pracownika"+id);
-    }
-
-     */
-
     public String toString() {
         String info = "Stacja: " + nazwa + "\n";
         for(Pracownik p : pracownikList) {
             info += "Pracownicy stacji: " + p.imie +" "+p.nazwisko + "\n";
         }
         for(Zakupy k : klientList){
-            info += "KlientStacja: "+k.klient+k.stacja+k.iloscPaliwa;
+            info += "KlientStacja: "+k.klient+k.stacja+k.kupioneProdukty.toArray();
         }
         return info;
     }

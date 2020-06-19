@@ -1,18 +1,23 @@
 package MP01;
 
+import java.time.LocalDate;
+
 public class Faktura extends MainExt {
 
-    String nazwa, miasto, ulica, kodPocztowy;
+    String daneNabywcy;
     int NIP;
+    int podatek_VAT = 19;
+    double kwota;
+    LocalDate dataWystawienia;
     //Asocjacja kwalifikowana
     private Klient klient;
 
-    public Faktura(String nazwa, int NIP, String miasto, String ulica, String kodPocztowy){
-        this.nazwa = nazwa;
+    public Faktura(LocalDate dataWystawienia, int NIP, String daneNabywcy, double kwota, int podatek_VAT){
+        this.dataWystawienia = dataWystawienia;
         this.NIP = NIP;
-        this.miasto = miasto;
-        this.ulica = ulica;
-        this.kodPocztowy = kodPocztowy;
+        this.daneNabywcy = daneNabywcy;
+        this.kwota = kwota;
+        this.podatek_VAT = podatek_VAT;
     }
 
     public void addKlientQualif(Klient klient) {
@@ -24,8 +29,7 @@ public class Faktura extends MainExt {
     }
 
     public String toString(){
-
-        return "Dane faktury. Nazwa firmy: "+nazwa+"\nNIP: "+NIP+"\nMiasto: "+miasto+"\nUlica: "+ulica+"\nKod Pocztowy: "+kodPocztowy+"\n";
+        return "Dane faktury. :\nNIP: "+NIP+"\nDane nabywcy: "+daneNabywcy+"\nKwota: "+kwota+"\nWysokosc podatku VAT: "+podatek_VAT+"\n";
     }
 
 
