@@ -1,6 +1,7 @@
 package MP01;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.List;
 
 public class Zakupy extends MainExt {
@@ -8,15 +9,23 @@ public class Zakupy extends MainExt {
     Klient klient;
     Stacja stacja;
     private LocalDate dataZakupow;
-    List<Object> kupioneProdukty;
+    public List<String> dostepneProdukty;
 
-    public Zakupy(Klient klient, Stacja stacja, List<Object> kupioneProdukty){
+    public Zakupy(Klient klient, Stacja stacja){
         this.klient = klient;
         this.stacja = stacja;
         this.dataZakupow = LocalDate.now();
-        this.kupioneProdukty = kupioneProdukty;
-
+        dostepneProdukty = Arrays.asList("Płyn do spryskiwaczy", "Batonik");
     }
+
+    public List<String> getDostepneProdukty(){
+        return dostepneProdukty;
+    }
+
+//    public void dostepneProdukty(){
+//        this.dostepneProdukty.add("Płyn do spryskiwaczy");
+//        this.dostepneProdukty.add("Batonik");
+//    }
 
     //Asocjacja z atrybutem
     /*
@@ -44,6 +53,6 @@ public class Zakupy extends MainExt {
 //    }
 
     public String toString(){
-        return "Klient "+klient+" zatankował dnia "+ dataZakupow +" na stacji "+stacja+"\nLista produktow: "+ kupioneProdukty.toArray()+"\n";
+        return "Klient "+klient+" zatankował dnia "+ dataZakupow +" na stacji "+stacja+"\nLista produktow: "+"\n";
     }
 }

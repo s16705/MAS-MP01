@@ -1,13 +1,12 @@
-package GUI;
+package GUIold;
 
 import javax.swing.*;
 
-public class FakturaGUI {
+public class PracownikGUI {
     public JPanel panel1;
+    private JButton wprowadźDaneButton;
     private JTextField textField1;
     private JTextField textField2;
     private JTextField textField3;
     private JTextField textField4;
-    private JTextField a19TextField;
-    private JButton wprowadźDaneButton;
 }

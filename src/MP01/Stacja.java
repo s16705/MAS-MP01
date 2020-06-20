@@ -1,6 +1,8 @@
 package MP01;
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
+import java.util.Map;
 
 public class Stacja extends MainExt {
 
@@ -10,6 +12,9 @@ public class Stacja extends MainExt {
     //KlientStacja ks;
     List<Zakupy> klientList;
     List<String> sprzedawanePaliwo = new ArrayList<>();
+    private static Map<Class, List<Stacja>> mapaStacji = new Hashtable<>();
+    List<Stacja> listaStacji = new ArrayList<>();
+
 
     public Stacja(String nazwa, String adres){
         this.nazwa = nazwa;
@@ -18,6 +23,8 @@ public class Stacja extends MainExt {
         sprzedawanePaliwo.add("Benzyna");
         sprzedawanePaliwo.add("Diesel");
         sprzedawanePaliwo.add("LPG");
+        listaStacji.add(this);
+        mapaStacji.put(Stacja.class, listaStacji);
     }
 
     //Zwykla asocjacja
@@ -29,13 +36,31 @@ public class Stacja extends MainExt {
         }
     }
 
+    public static List<Stacja> getAllStacje(Class klasa){
+        List<Stacja> result = null;
+        if (mapaStacji.containsKey(klasa)) {
+            result = mapaStacji.get(klasa);
+            for (Stacja s : result) {
+                System.out.println("Wszystkie stacje " + klasa.toString() + " " + s);
+            }
+        }else{
+            System.out.println("Stacja nie istnieje");
+        }
+        return result;
+    }
+
+    public String getNazwa(){
+        return nazwa;
+    }
+
     public String toString() {
         String info = "Stacja: " + nazwa + "\n";
         for(Pracownik p : pracownikList) {
             info += "Pracownicy stacji: " + p.imie +" "+p.nazwisko + "\n";
         }
         for(Zakupy k : klientList){
-            info += "KlientStacja: "+k.klient+k.stacja+k.kupioneProdukty.toArray();
+//            info += "KlientStacja: "+k.klient+k.stacja+k.kupioneProdukty.toArray();
+            info += "KlientStacja: "+k.klient+k.stacja;
         }
         return info;
     }
