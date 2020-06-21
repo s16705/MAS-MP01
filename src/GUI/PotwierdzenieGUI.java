@@ -1,6 +1,7 @@
 package GUI;
 
 import com.sun.deploy.panel.ExceptionListDialog;
+import oracle.jrockit.jfr.JFR;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -13,7 +14,6 @@ public class PotwierdzenieGUI {
     private JList wybraneList;
     private JButton anulujButton;
     private JButton potwierdzButton;
-    public JFrame jHistoria;
 
     public PotwierdzenieGUI(){
         initialize();
@@ -21,7 +21,7 @@ public class PotwierdzenieGUI {
         anulujButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ZakupyGUI.jPotwierdzenie.dispose();
+                JFramesController.jPotwierdzenie.dispose();
             }
         });
 
@@ -29,14 +29,11 @@ public class PotwierdzenieGUI {
             //Otoworzenie historii zakupow
             @Override
             public void actionPerformed(ActionEvent e) {
-                zapisDoPliku();
+                JFramesController.zapisDoPliku();
+                JFramesController.jPotwierdzenie.dispose();
+                JFramesController.jZakupy.dispose();
 
-                jHistoria = new JFrame("Historia zakupow");
-                jHistoria.setContentPane(new HistoriaZakupowGUI().panel1);
-                jHistoria.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                jHistoria.pack();
-                jHistoria.setLocationRelativeTo(null);
-                jHistoria.setVisible(true);
+                JFramesController.historia();
             }
         });
 
@@ -53,22 +50,5 @@ public class PotwierdzenieGUI {
         wybraneList.setModel(listModel);
     }
 
-    public void zapisDoPliku(){
-        int val = ZakupyGUI.wybraneProdukty.size();
-        PrintWriter writer = null;
-        try{
-            writer = new PrintWriter("Historia.txt");
 
-            writer.println(WyborKlientaGUI.imie);
-            writer.println(WyborKlientaGUI.nazwisko);
-
-            for (int i=0;i<val;i++){
-                writer.println(ZakupyGUI.wybraneProdukty.get(i));
-            }
-        }catch (Exception e){
-
-        }finally {
-            writer.close();
-        }
-    }
 }

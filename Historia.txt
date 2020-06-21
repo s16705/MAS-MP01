@@ -1,3 +1,4 @@
-test
-ttest
-Snikers
+
+Klient Sebastian Majczyna zakupił produkty Płyn do spryskiwaczy, Paczka Lays, Olej silnikowy, za kwotę 96.97zł. Data zakupów: 2020-06-06
+Klient Jan Kowalski zakupił produkty Płyn do spryskiwaczy, za kwotę 39.99zł. Data zakupów: 2020-06-21
+Klient Sebastian Majczyna zakupił produkty Paczka Lays, Paczka Lays, Snikers, za kwotę 16.97zł. Data zakupów: 2020-06-19

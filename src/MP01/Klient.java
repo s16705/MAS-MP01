@@ -14,7 +14,7 @@ public class Klient extends Osoba {
     //Asocjacja kwalifikowana
     private Map<Integer, Faktura> fakturaQualif = new TreeMap<>();
     private static Map<Class, List<Klient>> mapaKlientow = new Hashtable<>();
-    List<Klient> listaKlientow = new ArrayList<>();
+    static List<Klient> listaKlientow = new ArrayList<>();
 
     //Przeciążenie metod
     public Klient(String imie, String nazwisko) {
@@ -37,19 +37,6 @@ public class Klient extends Osoba {
         }
     }
 
-//    public static <T> List<T> getListaKlientow(Class klasa){
-//        List<Klient> klientList = null;
-//        if (listaKlientow.containsKey(klasa)){
-//            klientList = listaKlientow.get(klasa);
-//            for (Klient kl : klientList){
-//                System.out.println(klasa.toString() + " " + kl);
-//            }
-//        }else{
-//            System.out.println("Brak klientow");
-//        }
-//        return (List<T>) klientList;
-//    }
-
     public Faktura findFakturaQualif(int NIP) throws Exception{
         if(!fakturaQualif.containsKey(NIP)){
             throw new Exception("Nie udalo sie znaleźć podanego NIPu" + NIP);
@@ -57,17 +44,8 @@ public class Klient extends Osoba {
         return fakturaQualif.get(NIP);
     }
 
-    public static List<Klient> getAllKlients(Class klasa){
-        List<Klient> result = null;
-        if (mapaKlientow.containsKey(klasa)) {
-            result = mapaKlientow.get(klasa);
-            for (Klient k : result) {
-                System.out.println("All klients " + klasa.toString() + " " + k);
-            }
-        }else{
-            System.out.println("Brak klientow");
-        }
-        return result;
+    public static List<Klient> getAllKlients(){
+        return listaKlientow;
     }
 
     public String getImie(){

@@ -13,7 +13,7 @@ public class Stacja extends MainExt {
     List<Zakupy> klientList;
     List<String> sprzedawanePaliwo = new ArrayList<>();
     private static Map<Class, List<Stacja>> mapaStacji = new Hashtable<>();
-    List<Stacja> listaStacji = new ArrayList<>();
+    static List<Stacja> listaStacji = new ArrayList<>();
 
 
     public Stacja(String nazwa, String adres){
@@ -36,17 +36,8 @@ public class Stacja extends MainExt {
         }
     }
 
-    public static List<Stacja> getAllStacje(Class klasa){
-        List<Stacja> result = null;
-        if (mapaStacji.containsKey(klasa)) {
-            result = mapaStacji.get(klasa);
-            for (Stacja s : result) {
-                System.out.println("Wszystkie stacje " + klasa.toString() + " " + s);
-            }
-        }else{
-            System.out.println("Stacja nie istnieje");
-        }
-        return result;
+    public static List<Stacja> getAllStacje(){
+        return listaStacji;
     }
 
     public String getNazwa(){

@@ -8,7 +8,6 @@ import java.time.LocalDate;
 import java.time.Month;
 
 public class Main {
-    static JFrame jWybor;
 
     public static void main(String[] args) throws Exception {
         File file = new File("archiwum.txt");
@@ -17,54 +16,16 @@ public class Main {
         if(file.exists()){
             Klient seba = new Klient("Sebastian","Majczyna");
             Klient jan = new Klient("Jan","Kowalski");
-            Klient test = new Klient("t","t");
-            Stacja test2 = new Stacja("t","Lódź, 43-405 1-maja 22");
             Stacja orlen = new Stacja("Orlen","Warszawa, 02-405 Złota 12");
+            Stacja shell = new Stacja("Shell","Sochaczew, 02-405 Grunwaldzka 122Seba");
 
             //Tylko wyświetlamy dane jeżeli plik istnieje
             ObjectInputStream in = new ObjectInputStream(new BufferedInputStream(new FileInputStream(file)));
             MainExt.readExtent(in);
             MainExt.getExt();
 
+            JFramesController.start();
 
-            //Implementacja GUI
-//            JFrame jZakupy = new JFrame("Zakupy");
-//            jZakupy.setContentPane(new ZakupyGUI().panel1);
-//            jZakupy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//            jZakupy.pack();
-//            jZakupy.setVisible(true);
-//
-//            JFrame jKlient = new JFrame("Klient");
-//            jKlient.setContentPane(new KlientGUI().panel1);
-//            jKlient.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//            jKlient.pack();
-//            jKlient.setVisible(true);
-//
-//            JFrame jStacja = new JFrame("Stacja");
-//            jStacja.setContentPane(new StacjaGUI().panel1);
-//            jStacja.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//            jStacja.pack();
-//            jStacja.setVisible(true);
-//
-//            JFrame jFaktura = new JFrame("Faktura");
-//            jFaktura.setContentPane(new FakturaGUI().panel1);
-//            jFaktura.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//            jFaktura.pack();
-//            jFaktura.setVisible(true);
-//
-//            JFrame jPracownik = new JFrame("Pracownik");
-//            jPracownik.setContentPane(new PracownikGUI().panel1);
-//            jPracownik.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//            jPracownik.pack();
-//            jPracownik.setVisible(true);
-
-
-
-            jWybor = new JFrame("Wybor klienta");
-            jWybor.setContentPane(new HistoriaZakupowGUI().panel1);
-            jWybor.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            jWybor.pack();
-            jWybor.setVisible(true);
 
 
             in.close();
@@ -104,9 +65,5 @@ public class Main {
             out.close();
         }
 
-    }
-
-    public static void dispose(){
-        jWybor.dispose();
     }
 }

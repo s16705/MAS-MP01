@@ -17,6 +17,7 @@ public class WyborKlientaGUI {
     static String nazwisko;
     private JButton wprowadźDaneButton;
     private JTextField nazwaStacjiField;
+    private JButton historiaButton;
     ArrayList<Klient> listaKlientow = new ArrayList<>();
     ArrayList<String> listaImion = new ArrayList<>();
     ArrayList<String> listaNazwisk = new ArrayList<>();
@@ -34,31 +35,28 @@ public class WyborKlientaGUI {
                         for (Stacja s : listaStacji) {
                             if (s.getNazwa().equals(nazwaStacjiField.getText())){
                                 System.out.println("Nazwa stacji prawidlowa!");
-                                zacznijZakupy();
+                                JFramesController.zacznijZakupy();
                                 imie = imieField.getText();
                                 nazwisko = nazwiskoField.getText();
-                                Main.dispose();
+                                JFramesController.jWybor.dispose();
                             }
                         }
                     }
                 }
             }
         });
-    }
 
-    void zacznijZakupy(){
-        System.out.println(imieField.getText() + " " + nazwiskoField.getText() + " rozpoczyna zakupy.");
-        JFrame jZakupy = new JFrame("Zakupy");
-        jZakupy.setContentPane(new ZakupyGUI().panel1);
-        jZakupy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jZakupy.pack();
-        jZakupy.setLocationRelativeTo(null);
-        jZakupy.setVisible(true);
+        historiaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFramesController.historia();
+            }
+        });
     }
 
     public void initialize(){
-        listaKlientow.addAll(Klient.getAllKlients(Klient.class));
-        listaStacji.addAll(Stacja.getAllStacje(Stacja.class));
+        listaKlientow.addAll(Klient.getAllKlients());
+        listaStacji.addAll(Stacja.getAllStacje());
 
         for (Klient k : listaKlientow) {
             listaImion.add(k.getImie());
@@ -70,4 +68,5 @@ public class WyborKlientaGUI {
 
 
     }
+
 }
